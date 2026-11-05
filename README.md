@@ -3,7 +3,7 @@ Recover coins from GreenAddress wallets
 Build status: [![Build Status](https://travis-ci.org/greenaddress/garecovery.png?branch=master)](https://travis-ci.org/greenaddress/garecovery)
 
 For more information on the GreenAddress service, subaccount types and
-recovery, please read the [GreenAddress FAQ](https://greenaddress.it/en/faq)
+recovery, please read the [Blockstream App Help](https://help.blockstream.com/blockstream-app)
 
 # Dependencies for Ubuntu & Debian
 ```
