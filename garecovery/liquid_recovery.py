@@ -152,12 +152,12 @@ class LiquidRecovery(object):
             map_asset.update({address: asset})
 
         # use core rpc instead of wally mainly to delegate random number generation
+        out_list = [{k: v, "asset": map_asset[k]} if k in map_asset else {k: v} for k, v in map_amount.items()]
         transaction = core.createrawtransaction(
             inputs,
-            map_amount,
+            out_list,
             nlocktime,
-            is_replaceable,
-            map_asset)
+            is_replaceable)
 
         # Note that if an output is unblinded the following call removes the nonce commitment
         blinded_transaction = core.rawblindrawtransaction(
